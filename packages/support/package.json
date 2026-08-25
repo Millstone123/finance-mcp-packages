@@ -1,6 +1,6 @@
 {
-  "name": "@millstone123/finance-market-runtime",
-  "version": "1.1.0",
+  "name": "@millstone123/finance-market-runtime-v32",
+  "version": "1.0.0",
   "type": "module",
   "description": "Synthetic market data runtime",
   "repository": {

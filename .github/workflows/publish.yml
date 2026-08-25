@@ -17,7 +17,7 @@ jobs:
           scope: '@millstone123'
       - name: Publish runtime dependency
         working-directory: packages/support
-        run: npm publish
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Lock plugin dependencies
@@ -29,6 +29,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish plugin package
         working-directory: packages/plugin
-        run: npm publish
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

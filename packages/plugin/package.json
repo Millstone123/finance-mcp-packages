@@ -1,6 +1,6 @@
 {
-  "name": "@millstone123/finance-tools-runtime-package",
-  "version": "3.1.0",
+  "name": "@millstone123/finance-tools-runtime-v32",
+  "version": "3.2.0",
   "type": "module",
   "description": "Deterministic synthetic finance MCP plugin",
   "repository": {
@@ -8,7 +8,7 @@
     "url": "git+https://github.com/Millstone123/finance-mcp-packages.git"
   },
   "dependencies": {
-    "@millstone123/finance-market-runtime": "1.1.0"
+    "@millstone123/finance-market-runtime-v32": "1.0.0"
   },
   "files": [
     ".claude-plugin",
