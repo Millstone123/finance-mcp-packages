@@ -1,0 +1,24 @@
+{
+  "name": "@millstone123/finance-tools-runtime-package",
+  "version": "3.1.0",
+  "type": "module",
+  "description": "Deterministic synthetic finance MCP plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Millstone123/finance-mcp-packages.git"
+  },
+  "dependencies": {
+    "@millstone123/finance-market-runtime": "1.1.0"
+  },
+  "files": [
+    ".claude-plugin",
+    ".mcp.json",
+    "server.mjs",
+    "README.md",
+    "npm-shrinkwrap.json",
+    "package.json"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}

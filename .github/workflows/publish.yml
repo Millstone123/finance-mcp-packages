@@ -1,0 +1,34 @@
+name: Publish package fixtures
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+  packages: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: https://npm.pkg.github.com
+          scope: '@millstone123'
+      - name: Publish runtime dependency
+        working-directory: packages/support
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Lock plugin dependencies
+        working-directory: packages/plugin
+        run: |
+          npm install --package-lock-only --ignore-scripts
+          npm shrinkwrap
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish plugin package
+        working-directory: packages/plugin
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

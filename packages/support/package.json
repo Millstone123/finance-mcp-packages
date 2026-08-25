@@ -1,0 +1,18 @@
+{
+  "name": "@millstone123/finance-market-runtime",
+  "version": "1.1.0",
+  "type": "module",
+  "description": "Synthetic market data runtime",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Millstone123/finance-mcp-packages.git"
+  },
+  "exports": "./index.mjs",
+  "files": [
+    "index.mjs",
+    "package.json"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
